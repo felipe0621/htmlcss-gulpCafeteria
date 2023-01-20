@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%; //para convertir 1 rem en 10px
+    box-sizing: border-box;
+}
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuenteSecundaria;
+    font-style: 1.6rem;
+    background-color: v.$cafeClaro;
+}
+p {
+    color: v.$negro;
+    font-size: 1.6rem;
+    line-height: 2; //interlineado
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; //para que este centrado
+}
+a {
+    text-decoration: none;
+    color: v.$negro;
+}
+img {
+    max-width: 100%; //tome todo el ancho disponible
+    display: block; //para que no aparezca la ralla en la parte inferior
+    height: auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

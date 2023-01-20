@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-principal {
+    background-color: v.$blanco;
+    padding: 5rem 2rem;
+    @include m.tablet { 
+        padding: 10rem;
+        margin-top: -10rem; //para que se encime sobre su contenedor 
+        position: relative; //para que ese contenido aparezca por encima del otro
+    }
+}

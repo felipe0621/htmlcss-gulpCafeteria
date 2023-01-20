@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+//los mixis son una forma de utilizar codigo
+/*
+@mixin color {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+@mixin bgColor( $color ) {
+    background-color: $color;
+}*/
+
+//mixins para mediaqueries
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;  //directiva que debe tenerse en cuenta para que todo lo que este dentro de las llaves
+        //lolleve al media query
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin grid( $columnas, $espaciado) {
+    display:grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado; //para que de el mismo espaciado sea columnas o filas
+}
